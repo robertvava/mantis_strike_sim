@@ -1,3 +1,9 @@
+""" 
+This is a simplified simulation of the decision-making process of strike/no-strike of a praying mantis. 
+The only requirements to run the code are having numpy, matplotlib and statistics packages installed in the working environment. 
+
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from model.model import decision
@@ -10,7 +16,7 @@ t = np.linspace(0, 20, 30)
 m = [40, 10, 20, 15, 15]
 weights = [0.40, 0.10, 0.10, 0.20, 0.20]
 size = 70
-c2b = 65
+c2b = 65 
 speed = 65
 direction = 60
 dist = 87
