@@ -16,7 +16,8 @@ al., 2013; Masuda et. al., 2015).
 
 Similarly, general-purpose models of collective decision-making were also studied. In
 a computational simulation, Hasegawa et. al. (2017) explored a scenario of generic decisionmaking units faced with multiple options of different qualities to choose from. Their paper included multiple versions of the model, exploring how input variations would take effect in
-the final decisional output. They found that that threshold variance, as well as number of
+the final decisional output. 
+They found that that threshold variance, as well as number of
 decision units allocated to each option, has a great effect on the proportion of correct choices.
 Moreover, an interesting finding was that a quorum decision becomes superior when the
 variability of allocated units is large, while it becomes less effective otherwise. Collective
@@ -86,6 +87,7 @@ mantis is faced. The overall quality of an option is computed as the average of 
 “opportunity” quality of each time step. Perceived quality was also computed based on the
 real qualities.
 
+
 Each cluster is made of m decision units, and assigned a certain weight. A range of
 normally distributed thresholds (with mean μ, and σ standard deviation) are assigned to the
 decision units assigned to each cluster. Therefore, there are 5 clusters deciding “strike/nostrike” for each time step in the simulation. A visualization can be found in Figure 1. 
@@ -96,12 +98,16 @@ correct choice is considered the one that is above the value of μ(real_quality)
 σ(real_quality) over the entire distribution.
 Figure 1. A typical output of the quality over time
 The graph represents a distribution of objective quality over time. The violet bars represent a “strike” decision.
-Results and Analysis
+
+
+### Results and Analysis
+
 The descriptive statistics are summarized in Table 1. The simulation was ran 1000
 times for each configuration. A summary of the different configurations can be found in
 Table 2. The model did prove to choose the time moments with the highest probability of
 success, significantly more than 50% of the time, depending on the initial conditions and the
 configurations.
+
 It is important to note that in almost 40% of the cases, aside from Config. 3, the final
 decision was “not strike” (depicted in Figure 1) at any moment, regardless of the
 configuration (unless the quality distribution is very low). Typical outputs for each
@@ -140,7 +146,10 @@ Allocation of Units: [40, 10, 20, 15, 15]
 Mean 2.91
 Standard Deviation 0.37
 % of correct choices 73%
-Discussion
+
+
+### Discussion
+
 The praying mantis was a subject of interest within the research community for many
 of its design properties such as the ability to extend their limbs and catch prey at a very rapid
 phase, making it the perfect “assassin” (Markle, 2007). Most study of the praying mantis
@@ -150,6 +159,8 @@ further understand how 3D vision arises in nature. As far as the research for th
 there were no computational models of the praying mantis decision-making process for when
 to strike and capture their prey. In this paper, a collective decision-making mechanism has
 been adapted (Hasegawa et. al., 2017) for studying this aspect of the praying mantis behavior.
+
+
 Figure 2. Typical outputs for Config 1, 2, 3
 Top left = Configuration 1; Top right = Configuration 2; Bottom = Configuration 3.
 In their paper, Hasegawa et. al. mention how different properties of the decision making
@@ -159,6 +170,8 @@ which their model could be applied to. The current model is one example of such 
 application, simulating the decision-making process occurring in the praying mantis
 (Tenodera augustipennis) brain when faced with the decision of strike/no-strike over a period
 of time.
+
+
 Several initial conditions (scenarios) were explored in order to understand the
 behavior of the model and correlate it with real-world empirical data. Some observation made
 by Hasegawa et. al. were confirmed in the current model. In particular, threshold variation
@@ -178,6 +191,8 @@ confirms Hasegawa et. al. observations. Qualitatively, this difference should ma
 difference, but quantitatively, it leads to better decisions. In nature, this could be a parallel to
 the amount of “power” or energy allocated for more computationally difficult factors to
 weight into a final decision.
+
+
 The current model’s results generally matched the empirical data. Naturally,
 eliminating 5 out of 10 factors mentioned in Bertsch et. al. (2019) led to a fundamental
 difference in the real-world and simulated scenarios. However, in both real and simulated
@@ -200,29 +215,38 @@ improvement of the current simulation would be to choose a more accurate selecti
 Currently, the selection is based on a meta-threshold chosen arbitrarily, which can greatly
 affect the end results. This has not been tested in the current paper and thus the results must
 be treated cautiously.
-References
+
+
+### References
+
+
 Bertsch, D.J., Martin, J.P., Svenson, G.J. and Ritzmann, R.E., 2019. Predatory behavior changes with
 satiety or increased insulin levels in the praying mantis (Tenodera sinensis). Journal of Experimental
 Biology, 222(11), p.jeb197673.
+
 Hasegawa, E., Mizumoto, N., Kobayashi, K., Dobata, S., Yoshimura, J., Watanabe, S., Murakami, Y.
 and Matsuura, K., 2017. Nature of collective decision-making by simple yes/no decision
 units. Scientific reports, 7(1), pp.1-11.
+
 Markle, S., 2007. Praying mantises: hungry insect heroes. LernerClassroom.
+
 Masuda, N., Shea-wheller, T. A. O., Doran, C. & Franks, N. R. Computational model of collective nest
 selection by ants with heterogeneous acceptance thresholds. R. Soc. Open Sci. 2, 140533 (2015).
+
 Nityananda, V., Tarawneh, G., Henriksen, S., Umeton, D., Simmons, A. and Read, J.C., 2018. A
 novel form of stereo vision in the praying mantis. Current Biology, 28(4), pp.588-593.
+
 Robinson, E. J. H., Franks, N. R., Ellis, S., Okuda, S. & Marshall, J. A. R. A simple threshold rule is
 sufcient to explain sophisticated collective decision-making. PLoS One 6, e19981 (2011).
+
 Shea-wheller, T. A. O., Masuda, N., Sendova-franks, A. B. & Franks, N. R. Variability in individual
 assessment behaviour and its implications for collective decision-making. Proc. R. Soc. B 284, 1–7
 (2017).
+
 Soorati, M.D., Heinrich, M.K., Ghofrani, J., Zahadat, P. and Hamann, H., 2019. Photomorphogenesis
 for robot self-assembly: adaptivity, collective decision-making, and self-repair. Bioinspiration &
 biomimetics, 14(5), p.056006.
+
 Yamawaki, Y., 2017. Decision-making and motor control in predatory insects: a review of the praying
 mantis. Ecological Entomology, 42(s1), pp.39-50.
-Appendix
-model.py
-import numpy as np
-def decision(t, randnum, size, c2b, speed
+
