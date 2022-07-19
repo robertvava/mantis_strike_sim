@@ -96,9 +96,8 @@ simulation, there are multiple potential time steps (options) from which the man
 choose. The model assumes that any choice is perceived to lead to a successful strike. A
 correct choice is considered the one that is above the value of μ(real_quality) +
 σ(real_quality) over the entire distribution.
-Figure 1. A typical output of the quality over time
-The graph represents a distribution of objective quality over time. The violet bars represent a “strike” decision.
 
+![](images/Fig%201.png)
 
 ### Results and Analysis
 
@@ -124,28 +123,8 @@ with proportionally allocated units, in this configuration, the results were sig
 leading to a higher rate of correctly chosen options. Another observation is that the mean
 “rating” of the choices was also significantly higher, standing at 2.91, 1.26 higher than the
 standard Config 1.
-Table 1. Configurations 1, 2 and 3
-Config 1 Config 2 Config 3
-Mean 1.65 2.08 1.63
-Standard Deviation 0.43 0.22 0.45
-% of correct choices 60% 61% 26%
-Table 2. Decision Units and Weights array order match the factors order (top to bottom) in the table.
-Config 1 Config 2 Config 3
-Decision Units (m)
-[20, 20, 20, 20, 20] [20, 20, 20, 20, 20] [20, 20, 20, 20, 20]
-Weights [0.40, 0.10, 0.10, 0.20, 0.20] [0.45, 0.09, 0.35, 0.11, 0.20] [0.35, 0.15, 0.20, 0.10, 0.10]
-Size 70 60 90
-Contrast to Background 65 70 55
-Speed 65 85 50
-Direction 60 65 73
-Distance 87 75 68
-Means [87, 85, 89, 80, 83] [85, 80, 81, 80, 90] [75, 80, 85, 89, 79]
-Standard Deviations [1, 2, 4, 2.5, 2] [4, 2.3, 1.7, 3.2, 5] [4.1, 2.7, 1.2, 3, 2]
-Table 3. Configuration 1 with disproportionate allocation of units
-Allocation of Units: [40, 10, 20, 15, 15]
-Mean 2.91
-Standard Deviation 0.37
-% of correct choices 73%
+
+![](images/Tables.png)
 
 
 ### Discussion
@@ -161,8 +140,9 @@ to strike and capture their prey. In this paper, a collective decision-making me
 been adapted (Hasegawa et. al., 2017) for studying this aspect of the praying mantis behavior.
 
 
-Figure 2. Typical outputs for Config 1, 2, 3
-Top left = Configuration 1; Top right = Configuration 2; Bottom = Configuration 3.
+![](images/Outputs.png)
+
+
 In their paper, Hasegawa et. al. mention how different properties of the decision making
 mechanism, such as threshold variation, can alter the success rate of the responses. They
 suggest that the brain is a good example of a suitable natural collective decision-maker to
